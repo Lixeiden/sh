@@ -1,0 +1,30 @@
+{% load mainapp_tags %}
+<div class="container mt-3">
+    <h1>{{ title }}</h1>
+    <div class="row mt-4">
+
+        <div class="col-md-12">
+
+            {% for item in obj %}
+
+            <div class="card mb-4">
+
+                <div class="card-body">
+                    <div class="card-header mb-2">
+                        <a href="{% url 'pub' item.uri %}"> <b>{{ item.uri }}</b> </a>
+                    </div>
+
+                    {{ item.content|linebreaksbr|safe }}
+                    <div class="card-footer text-muted mt-3">
+
+
+                        {{ item.created }} ({{ item.created | timesince2 }} ago)
+
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</div>

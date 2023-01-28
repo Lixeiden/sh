@@ -1,0 +1,26 @@
+{% load mainapp_tags %}
+<div class="container mt-3">
+
+    <div class="row mt-4">
+
+        <div class="col-md-12">
+
+
+            <div class="card mb-4">
+
+                <div class="card-body">
+
+                    {{ obj.content|linebreaksbr|safe }}
+
+                    <div class="card-footer text-muted mt-3">
+
+                        {{ obj.created }} ({{ obj.created | timesince2 }} ago)
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

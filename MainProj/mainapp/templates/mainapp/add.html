@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} {{ block.super }} {% endblock %}
+
+{% block body %}
+
+<div class="card mt-5 mx-5">
+    <form action="{% url 'add' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-success" type="submit"> <b>PUBLISH</b> </button>
+    </form>
+</div>
+
+{% endblock %}
