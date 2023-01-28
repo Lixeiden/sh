@@ -6,6 +6,7 @@ class TelegrafModel(models.Model):
     created = models.DateField(auto_now_add=True, verbose_name='Creation date')
     file = models.FileField(upload_to='uploads/', verbose_name='Path to the file', blank=True)
     content = models.TextField(db_index=True, verbose_name='Content')
+    ttl = models.DurationField(verbose_name='Duration of live')
 
     def get_absolute_url(self):
         from django.urls import reverse
