@@ -13,7 +13,7 @@ Checklist:
 * vim MainProj/MainProj/settings.py
 
 * ip address add 192.168.0.1/24 dev ens3 (or vim /etc/network/interfaces)
-* vim /etc/postgresql/12/main/postgresql.conf (or vim /etc/network/interfaces) <-- listen_addresses = '192.168.0.1'
+* vim /etc/postgresql/12/main/postgresql.conf <-- listen_addresses = '192.168.0.1'
 * vim /etc/postgresql/12/main/pg_hba.conf <-- host all all 10.8.0.4/24 md5 + host all all 192.168.0.1/24 md5
 * systemctl restart postgresql
 * ?passwd postgres?
