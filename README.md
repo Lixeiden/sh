@@ -1,3 +1,6 @@
+** FROZEN **
+----------
+
 # sh
 Django app
 pastebin service (cocktail of features of: telegra.ph, pastebin.com, temp.sh)
